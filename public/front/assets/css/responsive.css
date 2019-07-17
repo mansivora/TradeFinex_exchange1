@@ -1,0 +1,99 @@
+@media (min-width: 1300px){
+	.container{
+		width: 1260px;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.home-bg { background-size: cover; }
+	.leftbar {
+		width: 320px;
+		min-width: 320px;
+	}
+	#toTop {
+		right: 15px;
+		bottom: 80px;
+	}
+}
+
+
+
+@media screen and (max-width: 991px) {
+
+	.flexbox { flex-direction: column; }
+	.footer-menu { margin: 15px 0; }
+	.footer-menu ul li { margin: 5px 0; }
+}
+@media screen and (max-width: 767px) {
+	.table-responsive {
+		border: none;
+	}
+	.navbar-nav > li > a {
+		line-height: normal;
+		height: auto;
+		color: #FFF;
+	}
+	.leftbar {
+		margin-left: -320px;
+		position: absolute;
+		z-index: 1;
+	}
+	.leftbar.open {
+		margin-left: 0;
+	}
+	.main-content {
+		padding: 15px 0;
+	}
+	.nav-tabs > li > a {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: 13px;
+	}
+	.panel {
+		margin-bottom: 15px;
+	}
+	button.bar-toggle {
+		display: block;
+	}
+	.inner_content {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.inner_content .panel .panel-body,
+	.inner_content .panel .panel-heading {
+		/*	padding-left: 15px;
+            padding-right: 15px;*/
+	}
+	.form-group {
+		margin-bottom: 15px;
+	}
+	.profile {
+		margin-bottom: 30px;
+	}
+	.profile_content .tab-content {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.footer-menu ul li { line-height: 14px; }
+	.footer-menu ul li a { font-size: 12px; }
+
+	.deposit-block {
+		width: 100%;
+		padding: 20px;
+	}
+	.withdraw-block {
+		width: 100%;
+		padding: 20px;
+	}
+	.withdraw-block_cmbx {
+		width: 100%;
+		padding: 20px;
+	}
+	.graph-copy {
+		font-size: 10px;
+	}
+	.destination p {font-size: 12px;}
+
+}
