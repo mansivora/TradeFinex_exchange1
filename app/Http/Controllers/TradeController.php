@@ -52,7 +52,8 @@ class TradeController extends Controller
         try {
             if (Session::get('alphauserid') == "") {
                 $userid = Session::get('alphauserid');
-                $pair = $pair ? $pair : 'ETH-USDT';
+                // $pair = $pair ? $pair : 'ETH-USDT';
+                $pair = $pair ? $pair : get_default_pair();
 
                 $checkpair = Pair::where(['type' => 'trade', 'pair' => $pair])->count();
                 if ($checkpair == 0) {
@@ -210,7 +211,8 @@ class TradeController extends Controller
                 $xdcaddr = get_user_details($userid, 'XDC_addr');
                 $xdceaddr = get_user_details($userid, 'XDCE_addr');
                 //$xdcbal = 0;
-                $pair = $pair ? $pair : 'ETH-USDT';
+                // $pair = $pair ? $pair : 'ETH-USDT';
+                $pair = $pair ? $pair : get_default_pair();
 
                 $fav = Favorite::where('user_id', $userid)->get();
                 if (count($fav) > 0) {

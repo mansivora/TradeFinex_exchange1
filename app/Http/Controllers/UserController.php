@@ -1343,7 +1343,7 @@ class UserController extends Controller
                     $validator = Validator::make($request->all(), [
 //                        'username' => 'required',
                         'first_name' => 'required',
-                        'last_name' => 'required',
+                        // 'last_name' => 'required',
                         'telephone' => 'required|numeric',
 //                        'city' => 'required',
 //                        'address' => 'required',
@@ -1743,34 +1743,44 @@ class UserController extends Controller
                 return redirect('logout');
             } else {
                 $userid = Session::get('alphauserid');
-//                if (get_user_details($userid, 'document_status') != '1') {
-//                    Session::flash('error', 'Please Complete your KYC process, to access the platform.');
-//                    return redirect('profile');
-//                } else {
-                check_live_address($userid);
-                $currencieslist = Currencies::all();
-
-                foreach ($currencieslist as $currency) {
-                    generate_currency_address($userid, $currency->currency_symbol);
+                if (get_user_details($userid, 'document_status') != '1') {
+                    //Session::flash('error','Please Complete your KYC process');
+                    //return redirect('profile');
                 }
-//                    $currencies = DB::table('user_currency_addresses')->where('user_currency_addresses.user_id', '=', $userid)
-//                        ->join('user_balance_new', function ($join) {
-//                            $join->on('user_balance_new.user_id', '=', 'user_currency_addresses.user_id');
-//                            $join->on('user_balance_new.currency_id', '=', 'user_currency_addresses.currency_id');
-//                        })
-//                        ->orderBy('user_balance_new.currency_id', 'asc')
-//                        ->select('user_currency_addresses.*', 'user_balance_new.*')->get();
-                $currencies = DB::table('user_currency_addresses')->where('user_currency_addresses.user_id', '=', $userid)
-                    ->join('currencies', function ($join) {
-                        $join->on('currencies.id', '=', 'user_currency_addresses.currency_id');
-                    })
-                    ->orderBy('currencies.id', 'asc')
-                    ->select('user_currency_addresses.*')->get();
+
+//                check_live_address($userid);
+//                $currencies = DB::table('user_currency_addresses')->where('user_currency_addresses.user_id', '=', $userid)
+//                    ->join('user_balance_new', function ($join) {
+//                        $join->on('user_balance_new.user_id', '=', 'user_currency_addresses.user_id');
+//                        $join->on('user_balance_new.currency_id', '=', 'user_currency_addresses.currency_id');
+//                    })
+//                    ->orderBy('user_balance_new.currency_id', 'asc')
+//                    ->select('user_currency_addresses.*', 'user_balance_new.*')->get();
                 $user = Users::where('id', $userid)->first();
 
-                return view('front.wallet', ['userid' => $userid, 'result' => $user, 'currencies' => $currencies]);
+//                $currencies = DB::table('user_currency_addresses')->where('user_currency_addresses.user_id', '=', $userid)
+//                    ->join('user_balance_new', function ($join) {
+//                        $join->on('user_balance_new.user_id', '=', 'user_currency_addresses.user_id');
+//                        $join->on('user_balance_new.currency_id', '=', 'user_currency_addresses.currency_id');
+//                    })
+//                    ->orderBy('user_balance_new.currency_id', 'asc')
+//                    ->select('user_currency_addresses.currency_name','user_currency_addresses.currency_addr')->get();
+                $currencies = Currencies::all();
+                if (isset($currencies[0])) {
+                    foreach ($currencies as $currency) {
+                        $bal = number_format(get_userbalance($userid, $currency->currency_symbol), '4', '.', ',');
+                        $intradebal = number_format(get_user_intradebalance($userid, $currency->currency_symbol), '4', '.', ',');
+                        $totalbal = number_format((get_userbalance($userid, $currency->currency_symbol) + get_user_intradebalance($userid, $currency->currency_symbol)), '4', '.', ',');
+                        $usd_bal = number_format(get_estimate_usd($currency->currency_symbol, $bal), '4', '.', ',');
+                        $array = array('currency' => $currency->currency_symbol, 'address' => get_user_details($userid, $currency->currency_symbol . '_addr'), 'balance' => $bal, 'intrade_balance' => $intradebal, 'total_balance' => $totalbal, 'usd' => $usd_bal);
+                        $result[] = $array;
+                    }
+                } else {
+                    $result = [];
+                }
+
+                return view('front.wallet', ['userid' => $userid, 'result' => $user, 'currencies' => $result]);
             }
-//            }
         } catch (\Exception $e) {
             \Log::error([$e->getMessage(), $e->getLine(), $e->getFile()]);
             return view('errors.404');

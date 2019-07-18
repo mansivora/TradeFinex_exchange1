@@ -1364,14 +1364,14 @@
 
         });
 
-        $('#referral').DataTable(
-            {
-                "ordering": false,
-                "pageLength": 10,
-                "lengthChange": false,
-                "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
-                "bInfo": false,
-            });
+        // $('#referral').DataTable(
+        //     {
+        //         "ordering": false,
+        //         "pageLength": 10,
+        //         "lengthChange": true,
+        //         "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+        //         "bInfo": false,
+        //     });
 
     </script>
 

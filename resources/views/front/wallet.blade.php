@@ -31,33 +31,33 @@
                                         <tr>
                                             <td class="title">
                                                 <div class="item"><img
-                                                            src="{{URL::asset('front')}}/assets/imgs/{{$val->currency_name}}.png"> {{$val->currency_name}}
+                                                            src="{{URL::asset('front')}}/assets/imgs/{{$val['currency']}}.png"> {{$val['currency']}}
                                                 </div>
                                             </th>
                                             {{--<td><div class="item">{{number_format($val->balance,'8','.','')}}</div></td>--}}
                                             <td>
-                                                <div class="item">{{number_format(get_userbalance($userid,$val->currency_name),'4','.',',')}}</div>
+                                                <div class="item">{{number_format(get_userbalance($userid,$val['currency']),'4','.',',')}}</div>
                                             </td>
                                             <td>
-                                                <div class="item">{{number_format(get_user_intradebalance($userid,$val->currency_name),'4','.',',')}}</div>
+                                                <div class="item">{{number_format(get_user_intradebalance($userid,$val['currency']),'4','.',',')}}</div>
                                             </td>
                                             <td>
-                                                <div class="item">{{number_format((get_userbalance($userid,$val->currency_name)+get_user_intradebalance($userid,$val->currency_name)),'4','.',',')}}</div>
+                                                <div class="item">{{number_format((get_userbalance($userid,$val['currency'])+get_user_intradebalance($userid,$val['currency'])),'4','.',',')}}</div>
                                             </td>
                                             <td>
                                                 <div class="item">
-                                                    $ {{number_format((get_estimate_usd($val->currency_name,get_userbalance($userid,$val->currency_name))),'4','.',',')}}</div>
+                                                    $ {{number_format((get_estimate_usd($val['currency'],get_userbalance($userid,$val['currency']))),'4','.',',')}}</div>
                                             </td>
                                             <td>
                                                 <div class="item deposit"><a
-                                                            onclick="depositmodal('{{$val->currency_name}}')"
+                                                            onclick="depositmodal('{{$val['currency']}}')"
                                                             style="cursor:pointer"><img
                                                                 src="{{URL::asset('front')}}/assets/imgs/deposit.png">
                                                         Deposit</a></div>
                                             </td>
                                             <td>
                                                 <div class="item withdraw"><a id="withdrawal" style="cursor:pointer"
-                                                                              onclick="withdrawalmodal('{{$val->currency_name}}','{{$val->currency_addr}}','{{get_userbalance($userid,$val->currency_name)}}')"
+                                                                              onclick="withdrawalmodal('{{$val['currency']}}','{{$val['address']}}','{{get_userbalance($userid,$val['currency'])}}')"
                                                                               data-toggle="popover" title="Withdraw"
                                                                               data-content="Some content inside the popover"><img
                                                                 src="{{URL::asset('front')}}/assets/imgs/withdraw.png">
@@ -68,7 +68,7 @@
                                             <td>
                                                 <div class="item"><img
                                                             src="{{URL::asset('front')}}/assets/imgs/history.png"><a
-                                                            href="{{url('/history')}}/{{$val->currency_name}}"
+                                                            href="{{url('/history')}}/{{$val['currency']}}"
                                                             style="cursor:pointer"> History</a></div>
                                             </td>
                                         </tr>

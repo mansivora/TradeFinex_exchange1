@@ -179,14 +179,14 @@ class SiteadminController extends Controller
             $arr = array('email_id' => $email, 'status' => 'active');
             $check = Admin::where($arr)->first();
             if ($check) {
-                if (Hash::check($password, $check->CMB_password)) {
+                if (Hash::check($password, $check->EX_password)) {
                     $sess = array('alpha_id' => $check->id, 'role' => $check->role, 'alowner' => $email);
 
                     Session::put($sess);
                     owner_activity($email, 'Login');
-                    if ($check->CMB_username == "Traders") {
+                    if ($check->EX_username == "Traders") {
                         return 3;
-                    } else if ($check->CMB_username == "EmailVerifier") {
+                    } else if ($check->EX_username == "EmailVerifier") {
                         return '4';
                     }
                     return "1";
@@ -395,8 +395,8 @@ class SiteadminController extends Controller
                             return redirect()->back()->withErrors($validator);
                         }
 
-                        if (Hash::check($request['curr_pass'], get_adminprofile('CMB_password'))) {
-                            $upt->CMB_password = bcrypt($request['password']);
+                        if (Hash::check($request['curr_pass'], get_adminprofile('EX_password'))) {
+                            $upt->EX_password = bcrypt($request['password']);
                         } else {
                             Session::flash('error', 'Current password is wrong');
                             return redirect('check_admin/profile');
@@ -404,7 +404,7 @@ class SiteadminController extends Controller
 
                     }
 
-                    $upt->CMB_username = $request['admin_username'];
+                    $upt->EX_username = $request['admin_username'];
                     $upt->email_id = $request['admin_email'];
 
                     $upt->country = $request['admin_country'];

@@ -891,7 +891,7 @@ function get_market_price($currency, $currency1)
         return (float)$result;
     } catch (\Exception $e) {
         \Log::error([$e->getMessage(), $e->getLine(), $e->getFile()]);
-        return view('errors.404');
+        return 0;
     }
 }
 
@@ -2369,6 +2369,19 @@ function usdt_admin_transfer_fun($sender, $reciever_address, $bal)
         return 'error';
     }
 
+}
+
+function get_default_pair()
+{
+    try
+    {
+    $pair = Pair::orderBy('id','asc')->first();
+    return $pair->pair;
+    }
+    catch (\Exception $exception) {
+            \Log::error([$exception->getMessage(), $exception->getFile(), $exception->getLine()]);
+            return '';
+        }
 }
 
 ?>
