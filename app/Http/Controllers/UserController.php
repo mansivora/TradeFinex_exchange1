@@ -1198,17 +1198,17 @@ class UserController extends Controller
                             while ($check != $file_name) {
                                 $file_name = $this->check_unique($check, $ext);
                             }
-//                    $target = $_SERVER['DOCUMENT_ROOT'].'/public/uploads/users/documents/'.$file_name;
-//                    if($verification->proof1!='') {
-//                        $target1 = $_SERVER['DOCUMENT_ROOT'] . '/public/uploads/users/documents/' . $verification->proof1;
-//                        unlink($target1);
-//                    }
-//                    move_uploaded_file( $_FILES['f_side']['tmp_name'], $target);
-                            if ($verification->proof1 != '') {
-                                Storage::disk('ftp')->delete($verification->proof1);
-                            }
-                            Storage::disk('ftp')->put($file_name, fopen($request->file('f_side'), 'r+'));
-                            $verification->proof1 = $file_name;
+                   $target = $_SERVER['DOCUMENT_ROOT'].'/uploads/users/documents/'.$file_name;
+                   if($verification->proof1!='') {
+                       $target1 = $_SERVER['DOCUMENT_ROOT'] . '/uploads/users/documents/' . $verification->proof1;
+                       unlink($target1);
+                   }
+                   move_uploaded_file( $_FILES['f_side']['tmp_name'], $target);
+                            // if ($verification->proof1 != '') {
+                            //     Storage::disk('ftp')->delete($verification->proof1);
+                            // }
+                            // Storage::disk('ftp')->put($file_name, fopen($request->file('f_side'), 'r+'));
+                            // $verification->proof1 = $file_name;
                         } else {
                             $to = ['raj@xinfin.org', 'rahul@xinfin.org', 'anil@xinfin.org', 'omkar@xinfin.org', 'aakash@xinfin.org', 'murphy@xinfin.org', 'alkeshc07@gmail.com', 'patelbunti@gmail.com'];
                             $subject = 'Some user trying to upload malicious file in KYC.';
@@ -1234,17 +1234,17 @@ class UserController extends Controller
                             while ($check != $file_name) {
                                 $file_name = $this->check_unique($check, $ext);
                             }
-//                    $target = $_SERVER['DOCUMENT_ROOT'].'/public/uploads/users/documents/'.$file_name;
-//                    if($verification->proof2!='') {
-//                        $target1 = $_SERVER['DOCUMENT_ROOT'] . '/public/uploads/users/documents/' . $verification->proof2;
-//                        unlink($target1);
-//                    }
-//                    move_uploaded_file( $_FILES['b_side']['tmp_name'], $target);
-                            if ($verification->proof2 != '') {
-                                Storage::disk('ftp')->delete($verification->proof2);
-                            }
-                            Storage::disk('ftp')->put($file_name, fopen($request->file('b_side'), 'r+'));
-                            $verification->proof2 = $file_name;
+                   $target = $_SERVER['DOCUMENT_ROOT'].'/uploads/users/documents/'.$file_name;
+                   if($verification->proof2!='') {
+                       $target1 = $_SERVER['DOCUMENT_ROOT'] . '/uploads/users/documents/' . $verification->proof2;
+                       unlink($target1);
+                   }
+                   move_uploaded_file( $_FILES['b_side']['tmp_name'], $target);
+                            // if ($verification->proof2 != '') {
+                            //     Storage::disk('ftp')->delete($verification->proof2);
+                            // }
+                            // Storage::disk('ftp')->put($file_name, fopen($request->file('b_side'), 'r+'));
+                            // $verification->proof2 = $file_name;
                         } else {
                             $to = ['raj@xinfin.org', 'rahul@xinfin.org', 'anil@xinfin.org', 'omkar@xinfin.org', 'aakash@xinfin.org', 'murphy@xinfin.org', 'alkeshc07@gmail.com', 'patelbunti@gmail.com'];
                             $subject = 'Some user trying to upload malicious file in KYC.';
@@ -1270,17 +1270,17 @@ class UserController extends Controller
                             while ($check != $file_name) {
                                 $file_name = $this->check_unique($check, $ext);
                             }
-//                    $target = $_SERVER['DOCUMENT_ROOT'].'/public/uploads/users/documents/'.$file_name;
-//                    if($verification->proof3!='') {
-//                        $target1 = $_SERVER['DOCUMENT_ROOT'] . '/public/uploads/users/documents/' . $verification->proof3;
-//                        unlink($target1);
-//                    }
-//                    move_uploaded_file( $_FILES['h_side']['tmp_name'], $target);
-                            if ($verification->proof3 != '') {
-                                Storage::disk('ftp')->delete($verification->proof3);
-                            }
-                            Storage::disk('ftp')->put($file_name, fopen($request->file('h_side'), 'r+'));
-                            $verification->proof3 = $file_name;
+                   $target = $_SERVER['DOCUMENT_ROOT'].'/uploads/users/documents/'.$file_name;
+                   if($verification->proof3!='') {
+                       $target1 = $_SERVER['DOCUMENT_ROOT'] . '/uploads/users/documents/' . $verification->proof3;
+                       unlink($target1);
+                   }
+                   move_uploaded_file( $_FILES['h_side']['tmp_name'], $target);
+                            // if ($verification->proof3 != '') {
+                            //     Storage::disk('ftp')->delete($verification->proof3);
+                            // }
+                            // Storage::disk('ftp')->put($file_name, fopen($request->file('h_side'), 'r+'));
+                            // $verification->proof3 = $file_name;
                         } else {
                             $to = ['raj@xinfin.org', 'rahul@xinfin.org', 'anil@xinfin.org', 'omkar@xinfin.org', 'aakash@xinfin.org', 'murphy@xinfin.org', 'alkeshc07@gmail.com', 'patelbunti@gmail.com'];
                             $subject = 'Some user trying to upload malicious file in KYC.';

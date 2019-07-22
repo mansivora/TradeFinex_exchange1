@@ -1637,7 +1637,8 @@ class TradeController extends Controller
     function trade_chart($pair)
     {
         try {
-            $pair = $pair ? $pair : 'ETH-USDT';
+            // $pair = $pair ? $pair : 'ETH-USDT';
+            $pair = $pair ? $pair : get_default_pair();
             //high value
             $charts = Charts::where('pair', $pair)->orderBy('datetime', 'desc')->first();
             if ($charts != '' || $charts != null) {
@@ -1728,7 +1729,8 @@ class TradeController extends Controller
     function chart_history($pair)
     {
         try {
-            $pair = $pair ? $pair : 'ETH-USDT';
+            // $pair = $pair ? $pair : 'ETH-USDT';
+            $pair = $pair ? $pair : get_default_pair();
             $time = Charts::where('pair', $pair)->get();
             $t = array();
             $c = array();
@@ -1764,8 +1766,8 @@ class TradeController extends Controller
     function charts($pair)
     {
         try {
-            $pair = $pair ? $pair : 'ETH-USDT';
-
+            // $pair = $pair ? $pair : 'ETH-USDT';
+            $pair = $pair ? $pair : get_default_pair();
             $trade_chart = Charts::where('pair', $pair)
                 ->orderBy('datetime', 'asc')->get();
             $trade_chart = $trade_chart->toJson();
@@ -1795,9 +1797,12 @@ class TradeController extends Controller
                             ),
                         1 =>
                             array(
-                                'value' => 'ETH-USDT',
-                                'name' => 'ETH-USDT',
-                                'desc' => 'ETH-USDT',
+                                // 'value' => 'ETH-USDT',
+                                // 'name' => 'ETH-USDT',
+                                // 'desc' => 'ETH-USDT',
+                                'value' => 'ABC-USD',
+                                'name' => 'ABC-USD',
+                                'desc' => 'ABC-USD',
                             )
                     ),
                 'symbols_types' =>
@@ -1954,8 +1959,8 @@ class TradeController extends Controller
                 return redirect('logout');
             } else {
                 $userid = Session::get('alphauserid');
-                $trade_history = Trade::where(['user_id' => $userid])->whereIn('pair', ['ETH-USDT'])->whereIn('status', ['completed'])->orderBy('created_at', 'desc')->paginate(10);
-                return view('front.trade_history', ['result' => $trade_history, 'getpair' => 'ETH-USDT', 'getstatus' => 'completed']);
+                $trade_history = Trade::where(['user_id' => $userid])->whereIn('pair', ['ABC-USD'])->whereIn('status', ['completed'])->orderBy('created_at', 'desc')->paginate(10);
+                return view('front.trade_history', ['result' => $trade_history, 'getpair' => 'ABC-USD', 'getstatus' => 'completed']);
             }
         } catch (\Exception $e) {
             \Log::error([$e->getMessage(), $e->getLine(), $e->getFile()]);

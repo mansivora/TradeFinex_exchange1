@@ -176,17 +176,18 @@
                             <div class="icon-bg bg-pink"></div>
                         </i><span class="menu-title">Trading Fee</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse <?php echo $in; ?>" style="height: <?php echo $style; ?>;">
-                        <li><a href="{{ url('check_admin/trading_fee/ETH-USDT') }}"><i
+                        <!-- <li><a href="{{ url('check_admin/trading_fee/ETH-USDT') }}"><i -->
+                        <li><a href="{{ url('check_admin/trading_fee/ABC-USD') }}"><i                                        
                                         class="fa fa-align-left"></i><span
-                                        class="submenu-title">Fee ETH-USDT</span></a></li>
+                                        class="submenu-title">Fee ABC-USD</span></a></li>
 
-                        <li><a href="{{ url('check_admin/trading_fee/BTC-USDT') }}"><i
+                        <li><a href="{{ url('check_admin/trading_fee/ABC-EUR') }}"><i
                                         class="fa fa-align-left"></i><span
-                                        class="submenu-title">Fee BTC-USDT</span></a></li>
+                                        class="submenu-title">Fee ABC-EUR</span></a></li>
 
-                        <li><a href="{{ url('check_admin/trading_fee/XRP-USDT') }}"><i
+                        <!-- <li><a href="{{ url('check_admin/trading_fee/XRP-USDT') }}"><i
                                         class="fa fa-align-left"></i><span
-                                        class="submenu-title">Fee XRP-USDT</span></a></li>
+                                        class="submenu-title">Fee XRP-USDT</span></a></li> -->
 
                     </ul>
 

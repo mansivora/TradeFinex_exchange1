@@ -2181,7 +2181,8 @@ class SiteadminController extends Controller
             if (Session::get('alpha_id') == "") {
                 return redirect('check_admin');
             } else {
-                $pair = $pair ? $pair : 'ETH-USDT';
+                // $pair = $pair ? $pair : 'ETH-USDT';
+                $pair = $pair ? $pair : get_default_pair();
                 if ($request->isMethod('post')) {
                     $this->validate($request, [
                         'buy_fee' => 'required',

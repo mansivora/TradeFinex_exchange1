@@ -64,16 +64,10 @@ return [
         ],
 
         'ftp' => [
-//            'driver' => 'ftp',
-//            'host' => '78.129.229.18',
-//            'username' => 'CMBDeXnet',
-//            'password' => 'SD#EDS@2w@',
-//            'root' => '/' // for example: /var/www/html/dev/images
-
             'driver' => 'ftp',
-            'host' => '78.129.229.19',
-            'username' => 'webftpalphaexnet',
-            'password' => 'RF#$rff@EW',
+            'host' => '',
+            'username' => '',
+            'password' => '',
             'root' => '/images' // for example: /var/www/html/dev/images
         ],
 

@@ -2327,7 +2327,8 @@
                     url: '/ticker/price_usd',
                     method: 'get',
                     success: function (data) {
-                        if (Pair == 'ETH-USDT') {
+                        // if (Pair == 'ETH-USDT') {
+                            if (Pair == 'ABC-USD') {   
                             min = parseFloat(data);
                             value = parseFloat(value);
                         }
