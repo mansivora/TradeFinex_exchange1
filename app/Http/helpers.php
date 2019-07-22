@@ -659,7 +659,7 @@ function get_estusd_price($currency, $amt)
         return (float)$retres;
     } catch (\Exception $e) {
         \Log::error([$e->getMessage(), $e->getLine(), $e->getFile()]);
-        return view('errors.404');
+        return 0;
     }
 }
 
