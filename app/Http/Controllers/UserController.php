@@ -291,6 +291,21 @@ class UserController extends Controller
         }
     }
 
+    function add_asset()
+    {
+        try {
+            if (Session::get('alphauserid') == "") {
+                Session::flash('info', 'Please login to place asset listing request.');
+                return redirect('login');
+            } else {
+                return view('front.add_asset');
+            }
+        } catch (\Exception $e) {
+            \Log::error([$e->getMessage(), $e->getLine(), $e->getFile()]);
+            return view('errors.404');
+        }
+    }
+
     function check_ripple_balance()
     {
         try {

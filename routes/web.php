@@ -238,6 +238,8 @@ Route::group(['prefix' => '','middleware' => ['web','XSS']], function () {
 
     Route::get('/btc','UserController@btc');
 
+    Route::get('/add_asset', 'UserController@add_asset');
+
 
 
 //

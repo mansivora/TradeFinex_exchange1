@@ -18,6 +18,7 @@
                         <li><a href="{{url('/privacy')}}">Privacy Policy</a></li>
                     <!-- <li><a href="{{url('/applytolist')}}">Apply to List</a></li> -->
                         <li><a href="{{url('/contact_us')}}">Contact us</a></li>
+                        <li><a href="{{url('/add_asset')}}">Add Asset</a></li>
 
                     </ul>
                 </div>
