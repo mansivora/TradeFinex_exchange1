@@ -371,6 +371,7 @@ class TradeController extends Controller
 //            return view('front.construction');
 //                }
             }
+            // \Log::info(['trade_data',$data]);
             return view('front.trade', $data);
         } catch (\Exception $e) {
             \Log::error([$e->getMessage(), $e->getLine(), $e->getFile()]);

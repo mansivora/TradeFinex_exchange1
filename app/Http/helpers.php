@@ -2281,7 +2281,7 @@ function min_trade($currency)
         $minimum = number_format($data->minimum, '3', '.', '');
         return $minimum;
     } catch (\Exception $e) {
-        echo 0;
+        return 0;
     }
 }
 
