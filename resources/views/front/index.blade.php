@@ -10,25 +10,21 @@
     <div class="banner-box">
         <div class="container">
 
-            <div class="banner-box_header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            @if(Session::get('alphauserid')=="")<p><a href="{{url('/register')}}"
-                                                                      style="color:#337ab7 !important">Create an
-                                    Account</a><span>|</span>Already Registered? <a href="{{url('/login')}}"
-                                                                                    style="color:#337ab7 !important">Log
-                                    In</a></p>@endif
+        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="text-white text-center">
+                                <h1 class="header_title mx-auto mt-4 mb-0 font-weight-normal">Marketplace for Trade Finance Assets</h1>
+                                <p class="header_subtitle mx-auto pt-4 mb-0 pb-2 text-white">Tokenize and Trade Cross border Trade Finance assets for Greater and Competitive Liquidity</p>
+                               
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="banner-img">
                         <a href="#" target="_blank"><img
-                                    src="{{URL::asset('front')}}/assets/imgs/banner_1.jpg" class=""/></a>
+                                    src="{{URL::asset('front')}}/assets/imgs/banner_1.jpg" class=""/>Marketplace for Trade Finance Assets</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -46,8 +42,39 @@
                         <a href="#"><img src="{{URL::asset('front')}}/assets/imgs/banner_4.jpg" class=""/></a>
                     </div>
                 </div>
+            </div> -->
+
+
+        </div>
+    </div>
+    <div class="banner-box">
+        <div class="container">
+
+        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="text-white text-center">
+                                <h1 class="header_title mx-auto mt-4 mb-0 font-weight-normal">Interoperable and Portable with Leading organisations like:</h1>
+                                <p class="header_subtitle mx-auto pt-4 mb-0 pb-2 text-white">Connect with Corda, IBM Hyperledger, Oracle Blockchain</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+        
+
+
+        </div>
+    </div>
+    <section class="home-full-gradient h-100vh" id="">
+        <div class="bg-overlay-home" style="background-image: url(public/front/assets/landing_page/assets/images/demo-bg.jpg);"></div>
+        <div class="home-table">
+            <div class="home-table-center">
+                <div class="container">
+                    
+                </div>
             </div>
         </div>
+    </section>
         {{--<div class="banner-box_footer">--}}
         {{--<div class="container">--}}
         {{--<div class="row">--}}
@@ -234,6 +261,53 @@
 
     <div class="feaured-box">
         <div class="container">
+           <div class="row"> 
+                <div class="col-md-8">
+                    <h2 class="h2-heading">Assets Currently Supported</h2>
+                   
+                    <!-- <div class="col-md-6 mb-30">
+                                <img src="{{URL::asset('front')}}/assets/imgs/featured.jpg" class="shadow_img">
+                            </div> -->
+                        <div class="col-md-6 mb-30">
+                            <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="shadow">
+                                            <div class="table-responsive front-table">
+                                                <table class="table" id="currencyTable">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="text-center">Receivables</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-center">Letters of Credit</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-center">Bank Guarantees</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-center">Bill of Lading</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-center">Warehousing receipts</th>
+                                                    </tr>
+                                                    </thead>
+                                                   
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                </div>
+            </div>  
+            </div>
+        </div>
+    </div>
+
+    <div class="feaured-box">
+        <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <h3 class="h3-heading">Feature for {{get_config('site_name')}} </h3>
@@ -294,23 +368,16 @@
             </div>
         </div>
     </div>
-
     <div class="section2">
         <div class="container">
-            <div class="hading-text">With the continued innovation for blockchain technology, both established and
-                emerging digital currencies will be supported by {{get_config('site_name')}}.
+            <div class="hading-text">Powered by 
+Exchange Infinite (XinFin) Hybrid Blockchain and XDC Protocol
+
             </div>
-        <!-- <div class="traning-share">
-                    <a><img src="{{URL::asset('front')}}/assets/imgs/trand4.png"></a>
-                    <a><img src="{{URL::asset('front')}}/assets/imgs/trand8.png"></a>
-                    {{--<a><img src="{{URL::asset('front')}}/assets/imgs/trand1.png"></a>--}}
-        {{--<a><img src="{{URL::asset('front')}}/assets/imgs/trand2.png"></a>--}}
-        {{--<a><img src="{{URL::asset('front')}}/assets/imgs/trand3.png"></a>--}}
-        {{--<a><img src="{{URL::asset('front')}}/assets/imgs/trand5.png"></a>--}}
-        {{--<a><img src="{{URL::asset('front')}}/assets/imgs/trand6.png"></a>--}}
-                </div> -->
+       
         </div>
     </div>
+    
     </div>
 
     {{--<div class="clearfix"></div>--}}
@@ -408,4 +475,20 @@
             }
         }
     </script>
+    <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("banner-box");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 @endsection
