@@ -127,7 +127,7 @@
                                         <td class="text-center" style="text-align: center"><strong
                                                     class="icon-style"><img
                                                         src="{{URL::asset('front')}}/assets/imgs/{{$result['first_currency']}}.png"><a
-                                                        href="{{url('/instrument')}}">{{$result['Pair']}}</a></strong>
+                                                        href="{{url('/instrument')}}/{{$result['Pair']}}">{{$result['Pair']}}</a></strong>
                                         </td>
                                         <td id="{{$result['Pair']}}_last"
                                             class="text-center"> {{$result['Last']}}</td>

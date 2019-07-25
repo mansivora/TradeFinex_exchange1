@@ -160,7 +160,7 @@ Route::group(['prefix' => '','middleware' => ['web','XSS']], function () {
     Route::get('/faq', 'UserController@faq');
     Route::get('/news', 'UserController@news');
     Route::get('/contact', 'UserController@contact');
-    Route::get('/instrument', 'UserController@instrument');
+    Route::get('/instrument/{pair}', 'UserController@instrument');
     Route::post('/login', 'UserController@login');
     Route::get('/sessionlogout', 'UserController@sessionlogout');
     Route::get('/logout', 'UserController@logout');

@@ -41,7 +41,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center"><b>Currency:</td>
-                                            <td class="text-center">USD</td>
+                                            <td class="text-center">{{$secondCurrency}}</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center"><b>Amount:</td>

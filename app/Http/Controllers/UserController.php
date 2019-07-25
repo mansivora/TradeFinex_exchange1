@@ -2271,12 +2271,17 @@ class UserController extends Controller
     }
 
 //instrument details
-function instrument ()
+function instrument ($pair)
 {
     try {
+        $pair = $pair ? $pair : get_default_pair();
+
+        $cur = explode("-", $pair);
+                $first_currency = $cur[0];
+                $second_currency = $cur[1];
         //            $data = Faq::where('status', '1')->orderBy('id', 'asc')->get();
         //            return view('front.faq', ['data' => $data]);
-                    return view('front.instrument');
+                    return view('front.instrument',['secondCurrency' => $second_currency]);
                 } catch (\Exception $e) {
                     \Log::error([$e->getMessage(), $e->getLine(), $e->getFile()]);
                     return view('errors.404');
