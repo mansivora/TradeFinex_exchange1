@@ -127,7 +127,7 @@
                                         <td class="text-center" style="text-align: center"><strong
                                                     class="icon-style"><img
                                                         src="{{URL::asset('front')}}/assets/imgs/{{$result['first_currency']}}.png"><a
-                                                        href="{{url('/trade/'. $result['Pair'])}}">{{$result['Pair']}}</a></strong>
+                                                        href="{{url('/instrument')}}">{{$result['Pair']}}</a></strong>
                                         </td>
                                         <td id="{{$result['Pair']}}_last"
                                             class="text-center"> {{$result['Last']}}</td>
@@ -370,8 +370,7 @@
     </div>
     <div class="section2">
         <div class="container">
-            <div class="hading-text">Powered by 
-Exchange Infinite (XinFin) Hybrid Blockchain and XDC Protocol
+            <div class="hading-text">Powered by Exchange Infinite (XinFin) Hybrid Blockchain and XDC Protocol
 
             </div>
        

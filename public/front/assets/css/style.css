@@ -1986,6 +1986,24 @@ input[type=checkbox], input[type=radio] {
 .mt-10{margin-top: 10px;}
 .mb-10{margin-bottom: 10px;}
 
+#customers {
+    /* font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; */
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left!important;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  
+  
 
 /*-----------------------------------
 	 Sided Full Image Styles

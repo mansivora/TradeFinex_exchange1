@@ -2270,6 +2270,19 @@ class UserController extends Controller
         }
     }
 
+//instrument details
+function instrument ()
+{
+    try {
+        //            $data = Faq::where('status', '1')->orderBy('id', 'asc')->get();
+        //            return view('front.faq', ['data' => $data]);
+                    return view('front.instrument');
+                } catch (\Exception $e) {
+                    \Log::error([$e->getMessage(), $e->getLine(), $e->getFile()]);
+                    return view('errors.404');
+                }
+}
+
     //decrypt
     function decryptAddress(Request $request)
     {
