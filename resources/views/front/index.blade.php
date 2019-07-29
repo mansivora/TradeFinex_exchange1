@@ -63,7 +63,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{url('/wallet')}}">Wallets</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/history')}}">Orders</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/contact_us')}}" target="_blank">Support</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('/news')}}">News</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="{{url('/news')}}">News</a></li> -->
                         <li>
                             <a class="dropdown dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                                aria-expanded="true" href="#">
@@ -84,7 +84,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{url('/trade')}}">Trade</a></li>
                         {{--<li><a href="{{url('/howtostart')}}">How to start</a></li>--}}
                         <li class="nav-item"><a class="nav-link" href="{{url('/contact_us')}}" target="_blank">Support</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('/news')}}">News</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="{{url('/news')}}">News</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="{{url('/login')}}">Login</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{url('/register')}}">Register</a></li>
                         {{--<li><a href="#" class=""><span class=""> <img src="{{URL::asset('front')}}/assets/imgs/noti.png"> </span></a></li>--}}

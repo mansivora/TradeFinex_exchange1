@@ -24,7 +24,7 @@
                         <li><a href="{{url('/wallet')}}">Wallets</a></li>
                         <li><a href="{{url('/history')}}">Orders</a></li>
                         <li><a href="{{url('/contact_us')}}" target="_blank">Support</a></li>
-                        <li><a href="{{url('/news')}}">News</a></li>
+                        <!-- <li><a href="{{url('/news')}}">News</a></li> -->
                         <li>
                             <a class="dropdown dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                                aria-expanded="true" href="#">
@@ -45,7 +45,7 @@
                         <li><a href="{{url('/trade')}}">Trade</a></li>
                         {{--<li><a href="{{url('/howtostart')}}">How to start</a></li>--}}
                         <li><a href="{{url('/contact_us')}}" target="_blank">Support</a></li>
-                        <li><a href="{{url('/news')}}">News</a></li>
+                        <!-- <li><a href="{{url('/news')}}">News</a></li> -->
                         <li><a href="{{url('/login')}}">Login</a></li>
                         <li><a href="{{url('/register')}}">Register</a></li>
                         {{--<li><a href="#" class=""><span class=""> <img src="{{URL::asset('front')}}/assets/imgs/noti.png"> </span></a></li>--}}
