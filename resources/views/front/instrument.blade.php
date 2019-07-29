@@ -60,6 +60,10 @@
                                             <td class="text-center">31-09-2019</td>
                                         </tr>
                                         <tr>
+                                            <td class="text-center"><b>Documents:</td>
+                                            <td class="text-center"><a href="https://gateway.ipfs.io/ipfs/QmY8X3jbvaP54P3q3LoXerf6aYhAtcZa1kRoeiMiJksQvq" target="_blank">QmY8X3jbvaP54P3q3LoXerf6aYhAtcZa1kRoeiMiJksQvq&nbsp;&nbsp;<i class="fa  fa fa-download"></i></a></td>
+                                        </tr>
+                                        <tr>
                                             <td class="text-center"><b>Seller's Retention:</td>
                                             <td class="text-center">0 %</td>
                                         </tr>
@@ -107,6 +111,7 @@
                                             <td class="text-center"><b>Disclouser Status:</td>
                                             <td class="text-center">Undisclosed</td>
                                         </tr>
+                                        
                                     </tbody>
                                 </table>      
                             </div>

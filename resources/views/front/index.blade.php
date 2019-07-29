@@ -110,7 +110,7 @@
                                 <div class="banner-description">
                                     <h1 class="animated fadeInDown delay-02s">Marketplace For Trade Finance Assets</h1>
                                     <p class="mx-auto animated fadeInDown delay-03s">Tokenize and Trade Cross border Trade Finance assets for greater and competitive liquidity</p>
-                                    <a href="1" class="btn btn-custom btn-rounded animated fadeInDown delay-04s">Register Now</a> </div>
+                                    <a href="{{url('/register')}}" class="btn btn-custom btn-rounded animated fadeInDown ">Register Now</a> </div>
                             </div>
                         </div>
                     </div>
@@ -226,8 +226,8 @@
                                     <tr id="{{$result['Pair']}}">
                                         <td class="text-center" style="text-align: center"><strong
                                                     class="icon-style"><img
-                                                        src="{{URL::asset('front')}}/assets/imgs/{{$result['first_currency']}}.png"><a
-                                                        href="{{url('/instrument')}}/{{$result['Pair']}}">{{$result['Pair']}}</a></strong>
+                                                        src="{{URL::asset('front')}}/assets/imgs/{{$result['second_currency']}}.png"><a
+                                                        href="{{url('/trade')}}">{{$result['Pair']}}</a></strong>
                                         </td>
                                         <td id="{{$result['Pair']}}_last"
                                             class="text-center"> {{$result['Last']}}</td>

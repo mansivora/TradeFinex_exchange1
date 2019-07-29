@@ -95,8 +95,8 @@
                                     @if($pair == $val['Pair'])
                                         <div class="flex-bit" id="{{$val['Pair']}}" style="display:">
                                             <div class="bit-icon">
-                                                <img src="{{URL::asset('front')}}/assets/imgs/{{$val['first_currency']}}.png"/>
-                                                <div><span>{{$val['Pair']}}</span>
+                                                <img src="{{URL::asset('front')}}/assets/imgs/{{$val['currency']}}.png"/>
+                                                <div><span><a href="{{url('/instrument')}}/{{$val['Pair']}}">{{$val['Pair']}}</a></span>
                                                     <p><span class="semi-black">VOL </span><span
                                                                 id="{{$val['Pair']}}_volume"
                                                                 class="{{$val['Colour']}}">{{$val['Volume']}} {{$val['first_currency']}}</span>
@@ -120,8 +120,8 @@
                                     @else
                                         <div class="flex-bit" id="{{$val['Pair']}}" style="display:none">
                                             <div class="bit-icon">
-                                                <img src="{{URL::asset('front')}}/assets/imgs/{{$val['first_currency']}}.png"/>
-                                                <div><span>{{$val['Pair']}}</span>
+                                                <img src="{{URL::asset('front')}}/assets/imgs/{{$val['currency']}}.png"/>
+                                                <div><span><a href="{{url('/instrument')}}/{{$val['Pair']}}">{{$val['Pair']}}</a></span>
                                                     <p><span class="semi-black">VOL </span><span
                                                                 id="{{$val['Pair']}}_volume"
                                                                 class="{{$val['Colour']}}">{{$val['Volume']}} {{$val['first_currency']}}</span>

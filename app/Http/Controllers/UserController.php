@@ -68,6 +68,7 @@ class UserController extends Controller
                     $get_pair_stat = PairStats::where('pair_id', $get_all_pair->id)->first();
                     $explode = explode('-', $get_all_pair->pair);
                     $first_currency = $explode[0];
+                    $second_currency = $explode[1];
                     $currency = $explode[1];
                     $pair = $get_all_pair->pair;
                     $id = $get_pair_stat->id;
@@ -79,7 +80,7 @@ class UserController extends Controller
                     $change = $get_pair_stat->change;
                     $color = strtolower($get_pair_stat->colour);
 
-                    $array = array('id' => $id, 'first_currency' => $first_currency, 'currency' => $currency, 'Pair' => $pair, 'Volume' => number_format($vol, 2, '.', ''), 'Low' => number_format($low, 3, '.', '')
+                    $array = array('id' => $id, 'first_currency' => $first_currency, 'second_currency'=> $second_currency,'currency' => $currency, 'Pair' => $pair, 'Volume' => number_format($vol, 2, '.', ''), 'Low' => number_format($low, 3, '.', '')
                     , 'High' => number_format($high, 3, '.', ''), 'Percentage' => $percentage_change, 'Change' => number_format($change, 3, '.', ''), 'Colour' => $color, 'Last' => number_format($last, 3, '.', ''));
                     $result[] = $array;
 
@@ -2273,6 +2274,22 @@ class UserController extends Controller
 //instrument details
 function instrument ($pair)
 {
+    // try {
+    //     if (Session::get('alphauserid') == "") {
+    //         Session::flash('info', 'Please login to view asset details.');
+    //         return redirect('login');
+    //     }
+    //     else{
+    //             $pair = $pair ? $pair : get_default_pair();
+
+    //             $cur = explode("-", $pair);
+    //                     $first_currency = $cur[0];
+    //                     $second_currency = $cur[1];
+    //             //            $data = Faq::where('status', '1')->orderBy('id', 'asc')->get();
+    //             //            return view('front.faq', ['data' => $data]);
+    //                         return view('front.instrument',['secondCurrency' => $second_currency]);
+    //         } 
+    // }    
     try {
         $pair = $pair ? $pair : get_default_pair();
 
