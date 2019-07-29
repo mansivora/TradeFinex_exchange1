@@ -222,26 +222,26 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                    @foreach($results as $result)
-                                    <tr id="{{$result['Pair']}}">
-                                        <td class="text-center" style="text-align: center"><strong
-                                                    class="icon-style"><img
-                                                        src="{{URL::asset('front')}}/assets/imgs/{{$result['second_currency']}}.png"><a
-                                                        href="{{url('/trade')}}">{{$result['Pair']}}</a></strong>
-                                        </td>
-                                        <td id="{{$result['Pair']}}_last"
-                                            class="text-center"> {{$result['Last']}}</td>
-                                        <td id="{{$result['Pair']}}_low" class="text-center">
-                                            <span>{{$result['Low']}}</span></td>
-                                        <td id="{{$result['Pair']}}_high" class="text-center">
-                                            <span>{{$result['High']}}</span></td>
-                                        <td class="text-center"><span id="{{$result['Pair']}}_change"
-                                                                      class="{{$result['Colour']}}">{{$result['Percentage']}}</span>
-                                        </td>
-                                        <td id="{{$result['Pair']}}_volume"
-                                            class="text-center">{{$result['Volume']}} {{$result['first_currency']}}</td>
-                                    </tr>
-                                @endforeach
+                                                         @foreach($results as $result)
+                                                            <tr id="{{$result['Pair']}}">
+                                                                <td class="text-center" style="text-align: center"><strong
+                                                                            class="icon-style"><img
+                                                                                src="{{URL::asset('front')}}/assets/imgs/{{$result['second_currency']}}.png"><a
+                                                                                href="{{url('/trade')}}">{{$result['Pair']}}</a></strong>
+                                                                </td>
+                                                                <td id="{{$result['Pair']}}_last"
+                                                                    class="text-center"> {{$result['Last']}}</td>
+                                                                <td id="{{$result['Pair']}}_low" class="text-center">
+                                                                    <span>{{$result['Low']}}</span></td>
+                                                                <td id="{{$result['Pair']}}_high" class="text-center">
+                                                                    <span>{{$result['High']}}</span></td>
+                                                                <td class="text-center"><span id="{{$result['Pair']}}_change"
+                                                                                            class="{{$result['Colour']}}">{{$result['Percentage']}}</span>
+                                                                </td>
+                                                                <td id="{{$result['Pair']}}_volume"
+                                                                    class="text-center">{{$result['Volume']}} {{$result['first_currency']}}</td>
+                                                            </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -267,25 +267,26 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr id="USD-ABC">
-                                                            <td class="text-center"><i class="fa fa-dollar"></i> <a href="http://exchange.tradefinex.org/trade/USD-ABC">USD-ABC</a></span>
-                                                            </td>
-                                                            <td id="USD-ABC_last" class="text-center">291.770</td>
-                                                            <td id="USD-ABC_low" class="text-center">0.000</td>
-                                                            <td id="USD-ABC_high" class="text-center">0.000</td>
-                                                            <td class="text-center"><span id="USD-ABC_change" class="text-success">0.00%</span>
-                                                            </td>
-                                                            <td id="USD-ABC_volume" class="text-center">0.00 USD</td>
-                                                        </tr>
-                                                        <tr id="EUR-ABC">
-                                                            <td class="text-center"><i class="fa fa-euro"></i> <a href="http://exchange.tradefinex.org/trade/EUR-ABC">EUR-ABC</a></span>
-                                                            </td>
-                                                            <td id="EUR-ABC_last" class="text-center">11233.000</td>
-                                                            <td id="EUR-ABC_low" class="text-center">0.000</td>
-                                                            <td id="EUR-ABC_high" class="text-center">0.000</td>
-                                                            <td class="text-center"><span id="EUR-ABC_change" class="text-success">0.00%</span></td>
-                                                            <td id="EUR-ABC_volume" class="text-center">0.00 EUR</td>
-                                                        </tr>
+                                                    @foreach($results as $result)
+                                                            <tr id="{{$result['Pair']}}">
+                                                                <td class="text-center" style="text-align: center"><strong
+                                                                            class="icon-style"><img
+                                                                                src="{{URL::asset('front')}}/assets/imgs/{{$result['second_currency']}}.png"><a
+                                                                                href="{{url('/trade')}}">{{$result['Pair']}}</a></strong>
+                                                                </td>
+                                                                <td id="{{$result['Pair']}}_last"
+                                                                    class="text-center"> {{$result['Last']}}</td>
+                                                                <td id="{{$result['Pair']}}_low" class="text-center">
+                                                                    <span>{{$result['Low']}}</span></td>
+                                                                <td id="{{$result['Pair']}}_high" class="text-center">
+                                                                    <span>{{$result['High']}}</span></td>
+                                                                <td class="text-center"><span id="{{$result['Pair']}}_change"
+                                                                                            class="{{$result['Colour']}}">{{$result['Percentage']}}</span>
+                                                                </td>
+                                                                <td id="{{$result['Pair']}}_volume"
+                                                                    class="text-center">{{$result['Volume']}} {{$result['first_currency']}}</td>
+                                                            </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -311,25 +312,26 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr id="USD-ABC">
-                                                            <td class="text-center"><i class="fa fa-dollar"></i> <a href="http://exchange.tradefinex.org/trade/USD-ABC">USD-ABC</a></span>
-                                                            </td>
-                                                            <td id="USD-ABC_last" class="text-center">291.770</td>
-                                                            <td id="USD-ABC_low" class="text-center">0.000</td>
-                                                            <td id="USD-ABC_high" class="text-center">0.000</td>
-                                                            <td class="text-center"><span id="USD-ABC_change" class="text-success">0.00%</span>
-                                                            </td>
-                                                            <td id="USD-ABC_volume" class="text-center">0.00 USD</td>
-                                                        </tr>
-                                                        <tr id="EUR-ABC">
-                                                            <td class="text-center"><i class="fa fa-euro"></i> <a href="http://exchange.tradefinex.org/trade/EUR-ABC">EUR-ABC</a></span>
-                                                            </td>
-                                                            <td id="EUR-ABC_last" class="text-center">11233.000</td>
-                                                            <td id="EUR-ABC_low" class="text-center">0.000</td>
-                                                            <td id="EUR-ABC_high" class="text-center">0.000</td>
-                                                            <td class="text-center"><span id="EUR-ABC_change" class="text-success">0.00%</span></td>
-                                                            <td id="EUR-ABC_volume" class="text-center">0.00 EUR</td>
-                                                        </tr>
+                                                    @foreach($results as $result)
+                                                            <tr id="{{$result['Pair']}}">
+                                                                <td class="text-center" style="text-align: center"><strong
+                                                                            class="icon-style"><img
+                                                                                src="{{URL::asset('front')}}/assets/imgs/{{$result['second_currency']}}.png"><a
+                                                                                href="{{url('/trade')}}">{{$result['Pair']}}</a></strong>
+                                                                </td>
+                                                                <td id="{{$result['Pair']}}_last"
+                                                                    class="text-center"> {{$result['Last']}}</td>
+                                                                <td id="{{$result['Pair']}}_low" class="text-center">
+                                                                    <span>{{$result['Low']}}</span></td>
+                                                                <td id="{{$result['Pair']}}_high" class="text-center">
+                                                                    <span>{{$result['High']}}</span></td>
+                                                                <td class="text-center"><span id="{{$result['Pair']}}_change"
+                                                                                            class="{{$result['Colour']}}">{{$result['Percentage']}}</span>
+                                                                </td>
+                                                                <td id="{{$result['Pair']}}_volume"
+                                                                    class="text-center">{{$result['Volume']}} {{$result['first_currency']}}</td>
+                                                            </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -355,25 +357,26 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr id="USD-ABC">
-                                                            <td class="text-center"><i class="fa fa-dollar"></i> <a href="http://exchange.tradefinex.org/trade/USD-ABC">USD-ABC</a></span>
-                                                            </td>
-                                                            <td id="USD-ABC_last" class="text-center">291.770</td>
-                                                            <td id="USD-ABC_low" class="text-center">0.000</td>
-                                                            <td id="USD-ABC_high" class="text-center">0.000</td>
-                                                            <td class="text-center"><span id="USD-ABC_change" class="text-success">0.00%</span>
-                                                            </td>
-                                                            <td id="USD-ABC_volume" class="text-center">0.00 USD</td>
-                                                        </tr>
-                                                        <tr id="EUR-ABC">
-                                                            <td class="text-center"><i class="fa fa-euro"></i> <a href="http://exchange.tradefinex.org/trade/EUR-ABC">EUR-ABC</a></span>
-                                                            </td>
-                                                            <td id="EUR-ABC_last" class="text-center">11233.000</td>
-                                                            <td id="EUR-ABC_low" class="text-center">0.000</td>
-                                                            <td id="EUR-ABC_high" class="text-center">0.000</td>
-                                                            <td class="text-center"><span id="EUR-ABC_change" class="text-success">0.00%</span></td>
-                                                            <td id="EUR-ABC_volume" class="text-center">0.00 EUR</td>
-                                                        </tr>
+                                                    @foreach($results as $result)
+                                                            <tr id="{{$result['Pair']}}">
+                                                                <td class="text-center" style="text-align: center"><strong
+                                                                            class="icon-style"><img
+                                                                                src="{{URL::asset('front')}}/assets/imgs/{{$result['second_currency']}}.png"><a
+                                                                                href="{{url('/trade')}}">{{$result['Pair']}}</a></strong>
+                                                                </td>
+                                                                <td id="{{$result['Pair']}}_last"
+                                                                    class="text-center"> {{$result['Last']}}</td>
+                                                                <td id="{{$result['Pair']}}_low" class="text-center">
+                                                                    <span>{{$result['Low']}}</span></td>
+                                                                <td id="{{$result['Pair']}}_high" class="text-center">
+                                                                    <span>{{$result['High']}}</span></td>
+                                                                <td class="text-center"><span id="{{$result['Pair']}}_change"
+                                                                                            class="{{$result['Colour']}}">{{$result['Percentage']}}</span>
+                                                                </td>
+                                                                <td id="{{$result['Pair']}}_volume"
+                                                                    class="text-center">{{$result['Volume']}} {{$result['first_currency']}}</td>
+                                                            </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -399,25 +402,26 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr id="USD-ABC">
-                                                            <td class="text-center"><i class="fa fa-dollar"></i> <a href="http://exchange.tradefinex.org/trade/USD-ABC">USD-ABC</a></span>
-                                                            </td>
-                                                            <td id="USD-ABC_last" class="text-center">291.770</td>
-                                                            <td id="USD-ABC_low" class="text-center">0.000</td>
-                                                            <td id="USD-ABC_high" class="text-center">0.000</td>
-                                                            <td class="text-center"><span id="USD-ABC_change" class="text-success">0.00%</span>
-                                                            </td>
-                                                            <td id="USD-ABC_volume" class="text-center">0.00 USD</td>
-                                                        </tr>
-                                                        <tr id="EUR-ABC">
-                                                            <td class="text-center"><i class="fa fa-euro"></i> <a href="http://exchange.tradefinex.org/trade/EUR-ABC">EUR-ABC</a></span>
-                                                            </td>
-                                                            <td id="EUR-ABC_last" class="text-center">11233.000</td>
-                                                            <td id="EUR-ABC_low" class="text-center">0.000</td>
-                                                            <td id="EUR-ABC_high" class="text-center">0.000</td>
-                                                            <td class="text-center"><span id="EUR-ABC_change" class="text-success">0.00%</span></td>
-                                                            <td id="EUR-ABC_volume" class="text-center">0.00 EUR</td>
-                                                        </tr>
+                                                    @foreach($results as $result)
+                                                            <tr id="{{$result['Pair']}}">
+                                                                <td class="text-center" style="text-align: center"><strong
+                                                                            class="icon-style"><img
+                                                                                src="{{URL::asset('front')}}/assets/imgs/{{$result['second_currency']}}.png"><a
+                                                                                href="{{url('/trade')}}">{{$result['Pair']}}</a></strong>
+                                                                </td>
+                                                                <td id="{{$result['Pair']}}_last"
+                                                                    class="text-center"> {{$result['Last']}}</td>
+                                                                <td id="{{$result['Pair']}}_low" class="text-center">
+                                                                    <span>{{$result['Low']}}</span></td>
+                                                                <td id="{{$result['Pair']}}_high" class="text-center">
+                                                                    <span>{{$result['High']}}</span></td>
+                                                                <td class="text-center"><span id="{{$result['Pair']}}_change"
+                                                                                            class="{{$result['Colour']}}">{{$result['Percentage']}}</span>
+                                                                </td>
+                                                                <td id="{{$result['Pair']}}_volume"
+                                                                    class="text-center">{{$result['Volume']}} {{$result['first_currency']}}</td>
+                                                            </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>
