@@ -96,7 +96,7 @@
                                         <div class="flex-bit" id="{{$val['Pair']}}" style="display:">
                                             <div class="bit-icon">
                                                 <img src="{{URL::asset('front')}}/assets/imgs/{{$val['currency']}}.png"/>
-                                                <div><span><a href="{{url('/instrument')}}/{{$val['Pair']}}">{{$val['Pair']}}</a></span>
+                                                <div><span><a href="{{url('/instrument')}}/{{$val['Pair']}}"target="_blank">{{$val['Pair']}}</a></span>
                                                     <p><span class="semi-black">VOL </span><span
                                                                 id="{{$val['Pair']}}_volume"
                                                                 class="{{$val['Colour']}}">{{$val['Volume']}} {{$val['first_currency']}}</span>
@@ -121,7 +121,7 @@
                                         <div class="flex-bit" id="{{$val['Pair']}}" style="display:none">
                                             <div class="bit-icon">
                                                 <img src="{{URL::asset('front')}}/assets/imgs/{{$val['currency']}}.png"/>
-                                                <div><span><a href="{{url('/instrument')}}/{{$val['Pair']}}">{{$val['Pair']}}</a></span>
+                                                <div><span><a href="{{url('/instrument')}}/{{$val['Pair']}}"target="_blank">{{$val['Pair']}}</a></span>
                                                     <p><span class="semi-black">VOL </span><span
                                                                 id="{{$val['Pair']}}_volume"
                                                                 class="{{$val['Colour']}}">{{$val['Volume']}} {{$val['first_currency']}}</span>
