@@ -144,6 +144,8 @@ Route::group(['prefix' => '','middleware' => ['web','XSS']], function () {
     Route::get('/', 'UserController@index');
     Route::get('/create_usdt', 'UserController@index');
     Route::get('/home', 'UserController@index');
+    Route::get('/investors', 'UserController@investors');
+    Route::post('/investors', 'UserController@investors');
     Route::get('/login', 'UserController@login');
     Route::get('/register', 'UserController@register');
     Route::get('/registration', 'UserController@registraion');

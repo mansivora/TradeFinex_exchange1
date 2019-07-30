@@ -60,7 +60,7 @@
                                             @endif
                                             </tbody>
                                         </table>
-                                        <span class="divide-table"><span id="last_divide">0.12000000 ETH</span></span>
+                                        <span class="divide-table"><span id="last_divide">29.000 ABC</span></span>
                                         <table id="limit_buy_table" class="table no-space">
                                             <thead>
                                             <tr>

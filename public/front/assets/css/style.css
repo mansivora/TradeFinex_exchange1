@@ -1950,6 +1950,7 @@ input.search:hover, input.search:focus {outline: 0;-webkit-box-shadow: inset 0 1
     height: 30px;
     min-height: 30px;
     max-height: 30px;
+    
 }
 
 input[type=checkbox], input[type=radio] {

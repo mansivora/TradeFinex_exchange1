@@ -5,6 +5,11 @@ $(window).on("scroll", function () {
 	$("html, body").stop().animate({
 		scrollTop: $(t.attr("href")).offset().top - 50
 	}, 1500, "easeInOutExpo"), o.preventDefault()
+}), $(".internalLink").on("click", function (o) {
+	var t = $(this);
+	$("html, body").stop().animate({
+		scrollTop: $(t.attr("href")).offset().top - 50
+	}, 1500, "easeInOutExpo"), o.preventDefault()
 }), $(document).on("click", ".navbar-collapse.show", function (o) {
 	$(o.target).is("a") && $(this).collapse("hide")
 }), $("#navbarCollapse").scrollspy({
@@ -30,6 +35,7 @@ if ($element.length > 0) {
 		mode: 'fade',		
 		pager: false,
 		infiniteLoop: true,
+		touchEnabled: false,
 		pause: '8000',
   
 	speed: 1500,

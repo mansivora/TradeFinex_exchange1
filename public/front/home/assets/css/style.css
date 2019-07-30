@@ -251,7 +251,15 @@ button:focus {
     color: #0ebdca;
 }
 
-
+.pb-100 {
+    padding-bottom: 100px!important;
+}
+.pt-100 {
+    padding-top: 100px!important;
+}
+.mb-50 {
+    margin-bottom: 50px !important;
+}
 
 /*==========================
         3.Navbar
@@ -365,8 +373,13 @@ button:focus {
 	position: relative;
 	z-index: 2;
 }
+
+.banner .banner-description {
+	text-align: center;
+	border: none;
+}
 .banner .banner-description h1 {
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 	font-size: 46px;
 	font-weight: normal;
 	line-height: 54px;
@@ -374,8 +387,10 @@ button:focus {
 }
 .banner .banner-description p {
 	font-size: 24px;
-	font-weight: 300;
-	color: #fff;
+	font-weight: 300;	
+	line-height: 1.3;
+    max-width: 660px;
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 .banner img {
 	margin: 0 auto;
@@ -411,19 +426,6 @@ button:focus {
 	position: absolute;
 	left: 0px;
 	top: 0px;
-}
-.banner .banner-description {
-	text-align: center;
-	border: none;
-}
-.banner .banner-description h1 {
-	padding-bottom: 10px;
-}
-.banner .banner-description p {
-	font-size: 26px;
-    line-height: 1.3;
-    max-width: 660px;
-    color: rgba(255, 255, 255, 0.8) !important;
 }
 .banner.slide1 img,
 .banner.slide2 img,
@@ -533,6 +535,197 @@ button:focus {
 .logo_img:hover {
     opacity: 1;
 }
+
+
+
+/*==========================
+   7.Inner Page - Investor
+============================*/
+
+.inner-banner {
+	background: url(../images/banner-2.jpg) no-repeat center top / cover;
+	margin-top: 50px;
+}
+
+.investor.slide1 {
+	background: url(../images/investor.jpg) no-repeat center top / cover;
+	position: relative;
+}
+.inner-banner:after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(8, 65, 122, 0.4);
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.inner-banner img {
+	display: block;
+	margin: 0 auto;
+}
+.inner-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.inner-banner .banner-description {
+	text-align: center;
+	border: none;
+}
+.inner-banner .banner-description h1 {
+	padding-bottom: 10px;
+	font-size: 46px;
+	font-weight: normal;
+	line-height: 54px;
+	color: #fff;
+}
+.inner-banner .banner-description p {
+	font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3;
+    max-width: 660px;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+
+/*---------- Benefits Section ----------*/
+#benefits {
+    position: relative;
+}
+.padding-eight-lr {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.padding-seven-half-tb {
+    padding-top: 7.5%;
+    padding-bottom: 7.5%;
+}
+.padding-ten-tb {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.position-relative {
+    position: relative !important;
+}
+.cover-background {
+	position: relative !important;
+    background-size: cover !important;
+    overflow: hidden !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.md-height-500 {
+    height: auto!important;
+}
+
+ul.benefits-list {
+	/*max-width: 430px;*/
+	padding: 5px 0 0 0;
+}
+ul.benefits-list li {
+	display: block;
+	padding: 12px 12px 12px 0;
+	border-bottom: 1px #d6d7d7 solid;
+	position: relative;
+	margin-left: 35px;
+	line-height: 20px;
+}
+ul.benefits-list li:before {
+	width: 40px;
+	position: absolute;
+	top: 12px;
+	left: -35px;
+	content: "\f058";
+	font-family: 'FontAwesome';
+	font-size: 26px;
+	color: #f29a32;
+}
+ul.benefits-list li:last-child {
+	border-bottom: none;
+}
+ul.benefits-list li p {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.inner-page-bodyTitle {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+/*---------- Benefits Section ----------*/
+
+/*---------- Contact Form ----------*/
+.contact-form-wrap {
+  background-color: #FFFFFF;
+  padding: 25px;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+.contact-form .form-row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.contact-form .form-row>.col,
+.contact-form .form-row>[class*=col-] {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2c3940;
+  background: #fff;
+  border: 1px solid #e8e9eb;
+  border-radius: .25rem;
+  -webkit-border-radius: .25rem;
+  -moz-border-radius: .25rem;
+  -ms-border-radius: .25rem;
+  -o-border-radius: .25rem;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-control:active,
+.contact-form .form-control:focus:active {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.contact-form input.form-control {
+  padding: 0 20px;
+  min-height: 50px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form select {
+  font-size: 15px;
+  min-height: 50px;
+  padding: 0 20px;
+  border: 1px solid #e8e9eb;
+}
+
+.contact-form select:focus,
+.contact-form select:active,
+.contact-form select:focus:active {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #e8e9eb;
+}
+/*---------- Contact Form ----------*/
 
 
 
@@ -799,8 +992,14 @@ button:focus {
 		font-size: 22px;
 		line-height: 26px;
 	}
-	.banner .banner-description h1 {
+	.inner-banner .banner-description h1 {
+		padding-bottom: 15px;
 		font-size: 38px;
+		line-height: 46px;
+	}
+	.inner-banner .banner-description p {
+		font-size: 22px;
+		line-height: 26px;
 	}
 	.banner.slide1 img,
 	.banner.slide2 img,
@@ -810,6 +1009,9 @@ button:focus {
 }
 
 @media (max-width: 991px) {
+	.sm-height-300 {
+    height: 300px!important;
+	}
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -826,12 +1028,16 @@ button:focus {
 		font-size: 28px;
 		line-height: 36px;
 	}
-	.banner .banner-description p {
+	.inner-banner .banner-description p {
 		font-size: 18px;
 	}
-	
-	.banner .banner-description h1 {
-		font-size: 36px;
+	.inner-banner .banner-description h1 {
+		padding-bottom: 10px;
+		font-size: 28px;
+		line-height: 36px;
+	}
+	.banner .banner-description p {
+		font-size: 18px;
 	}
 	.banner.slide1 img,
 	.banner.slide2 img,
@@ -865,11 +1071,23 @@ button:focus {
 	.banner .banner-description p {
 		font-size: 22px;
 	}
+	.inner-banner .banner-description h1 {
+		padding-bottom: 10px;
+		font-size: 32px;
+		line-height: 42px;
+	}
+	.inner-banner .banner-description p {
+		font-size: 22px;
+	}
 	.bx-wrapper .bx-prev {
     left: 5px;
 	}
 	.bx-wrapper .bx-next {
     right: 5px;
+	}
+	.padding-ten-tb {
+    padding-top: 0%;
+    padding-bottom: 5%;
 	}
 }
 
@@ -883,12 +1101,19 @@ button:focus {
     padding: 5px 5px 5px 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-}
+	}
 	.banner .banner-description h1 {
 		font-size: 34px;
 		line-height: 40px;
 	}
 	.banner .banner-description p {
+		font-size: 20px;
+	}
+	.inner-banner .banner-description h1 {
+		font-size: 34px;
+		line-height: 40px;
+	}
+	.inner-banner .banner-description p {
 		font-size: 20px;
 	}
 }
@@ -904,6 +1129,10 @@ button:focus {
 		font-size: 30px;
 		line-height: 38px;
 	}
+	.inner-banner .banner-description h1 {
+		font-size: 30px;
+		line-height: 38px;
+	}
 }
 
 /* Landscape iPhone 6 Plus */
@@ -916,11 +1145,18 @@ button:focus {
 		font-size: 26px;
 		line-height: 32px;
 	}
+	.inner-banner .banner-description h1 {
+		font-size: 26px;
+		line-height: 32px;
+	}
 }
 
 /* iPhone 4 */
 @media (max-width: 320px) {
 	.banner .banner-description h1 {
+		font-size: 24px;
+	}
+	.inner-banner .banner-description h1 {
 		font-size: 24px;
 	}
 }

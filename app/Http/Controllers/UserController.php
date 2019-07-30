@@ -2305,6 +2305,80 @@ function instrument ($pair)
                 }
 }
 
+function investors (Request $request)
+{
+    try{
+        if ($request->isMethod('post')) {
+            $validator = Validator::make($request->all(), [
+                'name' => 'required',
+                'customerEmail' => 'required|email',
+                'organization' => 'required',
+                // 'mobileNumber' => 'required',
+                'ticketType' => 'required',
+    //                'g-recaptcha-response' => 'required|captcha'
+                'captcha' => 'required|captcha',
+            ], [
+    //                'g-recaptcha-response.required' => 'Please verify that you are human.',
+    //                'g-recaptcha-response.captcha' => 'Captcha error! try again later or contact site admin.'
+                'captcha.required' => 'Captcha is required',
+                'captcha.captcha' => 'Captcha is wrong',
+            ]);
+            if ($validator->fails()) {
+                return redirect()->back()->withInput($request->all())->withErrors($validator);
+            }
+            $ins = new Enquiry;
+            $name = $request['name'];
+            $customerEmail = $request['customerEmail'];
+            $organization = $request['organization'];
+            // $mobileNumber = $request['mobileNumber'];
+            $ticketType = $request['ticketType'];
+
+            
+
+            //recognizing user by email id
+            // if ($user_type == 'user') {
+            //     $spl = explode("@", $enquiry_email);
+            //     $user1 = $spl[0];
+            //     $user2 = $spl[1];
+            //     $user_record = $this->checking($user1, $user2);
+
+            //     foreach ($user_record as $user)
+            //         $user_id = $user->id;
+
+            // }
+                $message = get_template('12', 'template');
+                $mailarr = array(
+                    '###Name###' => $name,
+                    // '###Id###' => $user_id,
+                    '###Email###' => $customerEmail,
+                    '###Organization###' => $organization,
+                    '###TICKET TYPE###' => $ticketType
+                );
+
+            
+
+        //email body
+            $to = get_config('contact_mail');
+            $username = $name;
+            $message = strtr($message, $mailarr);
+            $subject = strtr($ticketType, $mailarr);
+            if (sendmail($to, $subject, ['content' => $message])) {
+            // \Log::info(['andar',$to]);
+                Session::flash('success', 'Your Message Successfully sent to Administrator');
+            }
+            // Session::flash('success', 'Your Message Successfully sent to Administrator bahar');
+            // \Log::info(['bahar',$message]);
+            return view('front.investors');
+        } else{
+            return view('front.investors');
+        }
+    
+        } catch (\Exception $e) {
+            \Log::error([$e->getMessage(), $e->getLine(), $e->getFile()]);
+            return view('errors.404');
+        }
+    }
+
     //decrypt
     function decryptAddress(Request $request)
     {

@@ -14,6 +14,6 @@ class VerifyCsrfToken extends BaseVerifier
     protected $except = [
         //
         'api/*',
-        '/getdata'
+        '/getdata','/ajax/refresh_capcha'
     ];
 }
