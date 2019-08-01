@@ -204,43 +204,47 @@
 
     <!-- Start Footer -->
     <footer class="footer pt-1 text-center">
-        <div class="footer-upper-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="footer-info-list">
-                            <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="footer-info-list">
-                            <ul class="social-style">
-                                <li><a href="https://www.linkedin.com/in/tradefinex/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://twitter.com/TradeFinex" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCKzL0MI7gS_vlEKsUfiWuvA?view_as=subscriber" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-wrap">
-                    <div class="copyright-text">
-                        Copyright © 2019 TRADEFINEX TECH LTD (ADGM RegLab Participant), All rights reserved.
-                    </div>
+    <div class="footer-upper-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="footer-info-list">
+                        <ul>
+                            {{--<li><a href="{{url('/api')}}">API</a></li>--}}
+                            <li><a href="{{url('/aboutus')}}">About us</a></li>
+                            <li><a href="{{url('/faq')}}" target="_blank">FAQs</a></li>
+                            <li><a href="{{url('/terms')}}">Terms & Conditions</a></li>
+                            <li><a href="{{url('/privacy')}}">Privacy Policy</a></li>
+                        <!-- <li><a href="{{url('/applytolist')}}">Apply to List</a></li> -->
+                            <li><a href="{{url('/contact_us')}}">Contact us</a></li>
+                            <!-- <li><a href="{{url('/add_asset')}}">Add Asset</a></li> -->
 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="footer-info-list">
+                        <ul class="social-style">
+                            <li><a href="https://www.linkedin.com/in/tradefinex/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://twitter.com/TradeFinex" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCKzL0MI7gS_vlEKsUfiWuvA?view_as=subscriber" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-wrap">
+                <div class="copyright-text">
+                    Copyright © 2019 TRADEFINEX TECH LTD (ADGM RegLab Participant), All rights reserved.
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
     <!-- End Footer -->
 
     <!-- Back To Top -->

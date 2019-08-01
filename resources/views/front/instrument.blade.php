@@ -61,7 +61,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center"><b>Documents:</td>
-                                            <td class="text-center"><a href="https://ipfs-gateway.xinfin.network/QmWAmGrAuPE7erE8oAFDHNVXYY678GkDj5oHf3ab418fWi" target="_blank">QmWAmGrAuPE7erE8oAFDHNVXYY678GkDj5oHf3ab418fWi&nbsp;&nbsp;<i class="fa  fa fa-download"></i></a></td>
+                                            <td class="text-center"><a href="https://ipfs-gateway.xinfin.network/QmaUiqS879cQ3MU3Tq8TiwksTyqhkjFj51vwSn39ciM1Kx" target="_blank">QmaUiqS879cQ3MU3Tq8TiwksTyqhkjFj51vwSn39ciM1Kx&nbsp;&nbsp;<i class="fa  fa fa-download"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td class="text-center"><b>Seller's Retention:</td>
