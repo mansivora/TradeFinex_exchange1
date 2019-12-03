@@ -32,6 +32,11 @@
                                                 <p><i class="fas fa-exclamation-circle" style="color: red;"></i> Please
                                                     check that you are visiting <strong>https://www.{{strtolower(get_config('site_url'))}}</strong>.
                                                 </p>
+                                                <p>Demo Account <br>
+                                                    <strong>Email: exchange.tradefinex@gmail.com</strong><br>
+                                                    <strong>Password: TradeFinance</strong>
+                                                </p>
+                                            </div>
                                             <!-- <img src="{{URL::asset('front')}}/assets/imgs/safeLink1.png" style="border:1px solid black" /> -->
                                             </div>
                                         </div>
