@@ -336,7 +336,7 @@
                                     programs.</p>
                                 <p>You may cancel your {{get_config('site_name')}} Account at any time by withdrawing
                                     all balances and
-                                    visiting <a href="http://{{url('/'}}">www.{{get_config('site_url')}}
+                                    visiting <a href="http://{{url('/')}}">www.{{get_config('site_url')}}
                                         .</a> You will not be charged
                                     for canceling your {{get_config('site_name')}} Account, although you will be
                                     required to pay any
